@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect Card Exercise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", serif;
+      }
+      /* 
+        Colors: 
+        body background: #0a0a0a
+        card background: #262626
+        card title: white
+        card text: #a3a3a3
+        social icons: #a3a3a3
+        button background: #404040
+        button text: white
+        */
+
+      .card {
+        background-color: #262626;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        width: 300px;
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .card-text {
+        color: #a3a3a3;
+        font-size: 12px;
+      }
+
+      .avatar-container {
+        width: 100px;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .avatar {
+        width: 100%;
+        border-radius: 999px;
+        object-fit: cover;
+      }
+      .card-title {
+        color: white;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .card-title-text {
+        font-size: 20px;
+      }
+
+      svg {
+        border-radius: 999px;
+        border: 1px solid #a3a3a3;
+        color: #a3a3a3;
+        padding: 9px;
+        width: 24px;
+        height: 24px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+      }
+
+      button {
+        background-color: #616060;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        width: 100%;
+        
+      }
+
+      .button-container {
+        /* border-top: 1px solid #a3a3a3; */
+        width: 100%;
+      }
+
+
+      button:hover {
+        background-color: #a3a3a3;
+      }
+    </style>
+    </style>
+    <body>
+      <div class="card">
+        <div class="card-content">
+          <div class="avatar-container">
+            <img src="./avatar.jpg" alt="avatar" class="avatar" />
+          </div>
+          <div class="card-title">
+            <h1 class="card-title-text">Kai Anderson</h1>
+            <p class="card-text">Frontend Engineer | UI/UX Enthusiast</p>
+          </div>
+
+          <div class="social-icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-linkedin"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </div>
+          <div class="button-container">
+            <button>Contact Me</button>
+        </div>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>
