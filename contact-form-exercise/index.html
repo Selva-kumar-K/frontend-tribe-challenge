@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+        Label color: #2F1893
+        Input border color: #CDCAD1
+        Button background color: #20BAA7
+        Checkbox label color: #757575
+        Body background color: #2F1893
+        */
+
+      * {
+        box-sizing: border-box;
+        font-family: Inter, sans-serif;
+      }
+
+      body {
+        background-color: #2f1893;
+      }
+
+      .container {
+        background-color: #fff;
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      label {
+        color: #2f1893;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        width: 100%;
+        border-radius: 999px;
+        border: 1px solid #cdcad1;
+        padding: 10px;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #cdcad1;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-group label {
+        margin-top: 5px;
+      }
+
+      button {
+        background-color: #20baa7;
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .checkbox-container label {
+        color: #757575;
+        font-weight: 400;
+      }
+
+      .checkbox-container input {
+        width: 15px;
+
+        height: 15px;
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="name">YOUR NAME</label>
+          <input type="text" id="name" name="name" placeholder="First Name" />
+          <label for="email">YOUR EMAIL</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@email.com"
+          />
+          <label for="message">BUDGET</label>
+          <select name="" id="">
+            <option value="1000">$500</option>
+            <option value="1000">$1000</option>
+            <option value="1000">$1500</option>
+            <option value="1000">$2000</option>
+          </select>
+          <label for="message">YOUR MESSAGE</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Message"
+          ></textarea>
+
+          <div class="checkbox-container">
+            <input type="checkbox" name="" id="checkbox" />
+            <label for="checkbox">Send me a copy</label>
+          </div>
+
+          <div>
+            <button type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
