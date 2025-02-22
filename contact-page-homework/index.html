@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+        font-family: 'Inter', sans-serif;
+        Footer background color: #0f172a
+        Header & Main background color: #020617
+        Navbar text color: #64748b
+        Primary button background color: #9333ea
+        Secondary button border color: #334155
+        Form label color: #94a3b8
+        Form input border color: #334155
+        Container max-width: 768px
+        Container horizontal padding: 16px
+        */
+      * {
+        font-family: Inter, sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: white;
+        background-color: #0f172a;
+      }
+
+      .container {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #64748b;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .header-right {
+        display: flex;
+        gap: 10px;
+      }
+
+      button {
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .button-secondary {
+        background-color: #9333ea;
+        border: none;
+        color: white;
+      }
+
+      .button-primary {
+        border: 2px solid #334155;
+        background-color: #0f172a;
+        color: #94a3b8;
+      }
+
+      .main-description {
+        font-size: 15px;
+        font-weight: 500;
+        color: #94a3b8;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #94a3b8;
+      }
+
+      input,
+      textarea {
+        border-radius: 10px;
+        border: 2px solid #334155;
+        background-color: #0f172a;
+        color: white;
+        padding: 10px;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      main {
+        margin-top: 100px;
+        margin-bottom: 40px;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 390px;
+        gap: 15px;
+      }
+
+      .button-container  {
+        margin-top: 10px;
+        font-weight: 500;
+      }
+
+      footer {
+        color: #94a3b8;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #334155;
+      }
+
+      .footer-container {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <h1>Tribes UI</h1>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Resources</a>
+            <a href="#">Pricing</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <button class="button-primary">Login</button>
+          <button class="button-secondary">Sign up</button>
+        </div>
+      </header>
+
+      <main>
+        <div>
+          <h1>Get in touch</h1>
+          <p class="main-description">Our friendly team is here to help.</p>
+        </div>
+
+        <div>
+          <form class="contact-form">
+            <label for="">Name</label>
+            <input type="text" placeholder="Your name" />
+            <label for="">Email</label>
+            <input type="email" name="" id="" placeholder="your@email.com" />
+            <label for="">Message</label>
+            <textarea name="" id="" placeholder="Leave us a message"></textarea>
+
+            <div>
+              <input type="checkbox" name="" id="checkbox" />
+              <label for="checkbox"
+                >You agree to our friendly privacy policy</label
+              >
+            </div>
+
+            <div class="button-container">
+              <button class="button-secondary">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p>© 2077 Tribes UI. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
