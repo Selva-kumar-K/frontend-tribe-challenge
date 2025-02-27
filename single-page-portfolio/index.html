@@ -129,6 +129,61 @@
         line-height: 24px;
         color: #a1a1a1;
       }
+
+      .testimonials-section {
+        height: 897.5px;
+        padding: 80px 16px;
+      }
+
+      .testimonials-title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+      }
+
+      .testimonials-container {
+        height: 709.5px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+      }
+
+      .container{
+        position: relative;
+        padding: 24px 40px;
+
+
+      }
+      
+      .testimonial-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .testimonial-description {
+        font-size: 16px;
+        line-height: 24px;
+        color: #a1a1a1;
+      }
+
+      .user-container {
+        padding-top: 16px;
+        display: flex;
+        gap: 12px;
+      }
+
+      .user-name {
+        font-size: 16px;
+        line-height: 21px;
+        color: #ffff;
+      }
+      .user-description {
+        padding-top: 4px;
+        color: #a1a1a1;
+      }
     </style>
   </head>
   <body>
@@ -259,6 +314,87 @@
               Chronicle is an interactive portfolio tool that narrates your
               professional story through captivating visuals and storytelling.
             </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial section -->
+      <div class="testimonials-section">
+        <h2 class="testimonials-title">Testimonials</h2>
+        <div class="testimonials-container">
+          <div class="container">
+            <div class="testimonials-content">
+              <div class="testimonial-img">
+                <img src="./SVG.svg" alt="" />
+              </div>
+              <div>
+                <p class="testimonial-description">
+                  Working with John was a game-changer for our web application.
+                  His attention to detail and expertise in React helped us
+                  improve our performance metrics by 40%. Highly recommended!
+                </p>
+              </div>
+              <div>
+                <div class="user-container">
+                  <img src="./Background.png" alt="avatar" />
+                  <div class="user-content">
+                    <h1 class="user-name">Sarah Chen</h1>
+                    <p class="user-description">CTO, TechFlow Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="testimonials-content">
+              <div class="testimonial-img">
+                <img src="./SVG.svg" alt="" />
+              </div>
+              <div>
+                <p class="testimonial-description">
+                  John's frontend expertise transformed our e-commerce
+platform. His implementation of modern web
+technologies and focus on accessibility resulted in a 25%
+increase in user engagement and sales.
+                </p>
+              </div>
+              <div>
+                <div class="user-container">
+                  <img src="./Background.png" alt="avatar" />
+                  <div class="user-content">
+                    <h1 class="user-name">Michael Rodriguez</h1>
+                    <p class="user-description">Product Manager, ShopWave</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="testimonials-content">
+              <div class="testimonial-img">
+                <img src="./SVG.svg" alt="" />
+              </div>
+              <div>
+                <p class="testimonial-description">
+                  As a startup founder, finding a developer who
+                  understands both technical and business needs is
+                  crucial. John exceeded our expectations by delivering a
+                  responsive, scalable solution that our users love.
+                </p>
+              </div>
+              <div>
+                <div class="user-container">
+                  <img src="./Background.png" alt="avatar" />
+                  <div class="user-content">
+                    <h1 class="user-name">Emma Thompson</h1>
+                    <p class="user-description">Founder, InnovateLab</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            
           </div>
         </div>
       </div>
