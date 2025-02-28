@@ -146,17 +146,15 @@
         padding-top: 20px;
         display: flex;
         flex-direction: column;
-        gap:32px;
+        gap: 32px;
       }
 
-      .container{
+      .container {
         position: relative;
         padding: 24px 40px;
-
-
       }
-      
-      .testimonial-img{
+
+      .testimonial-img {
         position: absolute;
         top: 0;
         left: 0;
@@ -183,6 +181,55 @@
       .user-description {
         padding-top: 4px;
         color: #a1a1a1;
+      }
+
+      .experience-section {
+        height: 496px;
+        padding: 80px 0;
+      }
+
+      .experience-content {
+        padding: 0 16px;
+      }
+
+      .experience-header {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+      }
+
+      .experience-title {
+        font-size: 16px;
+        color: #a1a1a1;
+        line-height: 24px;
+        font-weight: normal;
+      }
+
+      .experience-company,
+      .experience-year {
+        color: #ffff;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 24px;
+      }
+
+      .experience-divider {
+        border: 1px dashed #404040;
+        flex-grow: 1;
+        margin-top: 10px;
+      }
+
+      .experience-details {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .experience-container {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
       }
     </style>
   </head>
@@ -352,10 +399,10 @@
               </div>
               <div>
                 <p class="testimonial-description">
-                  John's frontend expertise transformed our e-commerce
-                  platform. His implementation of modern web
-                  technologies and focus on accessibility resulted in a 25%
-                  increase in user engagement and sales.
+                  John's frontend expertise transformed our e-commerce platform.
+                  His implementation of modern web technologies and focus on
+                  accessibility resulted in a 25% increase in user engagement
+                  and sales.
                 </p>
               </div>
               <div>
@@ -376,10 +423,10 @@
               </div>
               <div>
                 <p class="testimonial-description">
-                  As a startup founder, finding a developer who
-                  understands both technical and business needs is
-                  crucial. John exceeded our expectations by delivering a
-                  responsive, scalable solution that our users love.
+                  As a startup founder, finding a developer who understands both
+                  technical and business needs is crucial. John exceeded our
+                  expectations by delivering a responsive, scalable solution
+                  that our users love.
                 </p>
               </div>
               <div>
@@ -393,8 +440,45 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-            
+      <div class="experience-section">
+        <div class="experience-content">
+          <h1 class="experience-header">Work Experience</h1>
+          <div class="experience-container">
+            <div>
+              <h1 class="experience-title">Senior Frontend Developer</h1>
+              <div class="experience-details">
+                <h1 class="experience-company">Meta</h1>
+                <span class="experience-divider"></span>
+                <p class="experience-year">2022 - Present</p>
+              </div>
+            </div>
+            <div>
+              <h1 class="experience-title">Frontend Developer</h1>
+              <div class="experience-details">
+                <h1 class="experience-company">Spotify</h1>
+                <span class="experience-divider"></span>
+                <p class="experience-year">2020 - 2022</p>
+              </div>
+            </div>
+            <div>
+              <h1 class="experience-title">Junior Frontend Developer</h1>
+              <div class="experience-details">
+                <h1 class="experience-company">Airbnb</h1>
+                <span class="experience-divider"></span>
+                <p class="experience-year">2018 - 2020</p>
+              </div>
+            </div>
+            <div>
+              <h1 class="experience-title">Web Developer Intern</h1>
+              <div class="experience-details">
+                <h1 class="experience-company">Twitter</h1>
+                <span class="experience-divider"></span>
+                <p class="experience-year">2018</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
