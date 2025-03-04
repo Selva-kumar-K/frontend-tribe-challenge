@@ -578,10 +578,19 @@
               I'll get back to you as soon as possible.
             </p>
 
-            <form class="contact-form">
-              <input type="text" placeholder="Your name" />
-              <input type="email" name="" id="" placeholder="Your email" />
-              <textarea name="" id="" placeholder="Your message"></textarea>
+            <form
+              class="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
+              <input type="text" placeholder="Your name" name="name" />
+              <input type="email" name="email" id="" placeholder="Your email" />
+              <textarea
+                name="message"
+                id=""
+                placeholder="Your message"
+              ></textarea>
               <button type="submit">Send Message</button>
             </form>
           </div>
