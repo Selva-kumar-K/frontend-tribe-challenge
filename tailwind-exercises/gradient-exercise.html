@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="h-96 w-72 m-10 relative">
+      <img
+        src="./phone-image.jpg"
+        alt="phone-image"
+        class="w-full h-full object-cover rounded-2xl"
+      />
+
+      <div
+        class="absolute w-full h-full top-0 bg-linear-to-b from-black opacity-40  via-transparent to-transparent rounded-xl"
+      ></div>
+
+      <div class="absolute top-10 left-10 w-40 ">
+        <h1
+          class="bg-linear-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text inline-block"
+        >
+          Design
+        </h1>
+
+        <p class="text-white font-semibold ">Great design speaks for itself</p>
+      </div>
+    </div>
+  </body>
+</html>
