@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <style>
+      @theme {
+        --font-geist: ("Geist", sans-serif);
+      }
+    </style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,43 +20,71 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
   <body>
+    <!-- Reworked header (by watching the video) -->
+
     <div
-      class="bg-linear-150 from-[#FDE68A] via-[#F9A8D4]/50 to-[#C084FC] rounded-3xl m-5  "
+      class="bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4]/50 to-[#C084FC] m-2 font-geist rounded-3xl"
     >
-        <div class="flex justify-between items-center px-4 h-[152px] sm:h-[192px] xl:w-[1152px] xl:mx-auto">
-            
-            <div class="flex items-center gap-[14px]">
-              <img src="./arrow.png" alt="arrow" height="24" width="24" />
-              <h1 class="font-semibold text-xl leading-6">Momentum</h1>
-            </div>
-    
-            <div class="sm:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 9h16.5m-16.5 6.75h16.5"
-                />
-              </svg>
-            </div>
-    
-            <nav class="hidden sm:block font-medium flex space-x-4">
-              <a href="#" class="leading-6">Features</a>
-              <a href="#" class="leading-6">Solutions</a>
-              <a href="#" class="leading-6">Resources</a>
-              <a href="#" class="leading-6">Get Started</a>
-            </nav>
-            
+      <!-- Section Container -->
+
+      <div class="container mx-auto pt-16 pb-48 px-8">
+        <!-- Header Container -->
+
+        <div class="flex justify-between items-center">
+          <div class="flex gap-[14px] items-center">
+            <img src="./arrow.png" alt="" class="w-4 h-4" />
+            <h1 class="font-semibold text-xl">Momentum</h1>
           </div>
-    </div>
-      
+
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 md:hidden"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          </div>
+          <nav class="hidden md:flex gap-1 items-center font-medium">
+            <a href="#" class="px-4">Features</a>
+            <a href="#" class="px-4">Solutions</a>
+            <a href="#" class="px-4">Resources</a>
+            <a href="#" class="px-4">Get Started</a>
+          </nav>
+        </div>
+
+        <!-- Hero Container -->
+
+        <div>
+          <h1 class="font-medium text-6xl pt-32 md:text-9xl">
+            Win More Deals. Faster.
+          </h1>
+          <p class="font-medium text-2xl pt-8 max-w-[576px]">
+            Momentum helps you close more sales with deep insights and smarter
+            automation.
+          </p>
+
+          <div class="pt-12 font-semibold flex gap-6 items-center">
+            <button
+              class="px-4 bg-black text-white rounded-full py-2 drop-shadow-lg cursor-pointer"
+            >
+              Get started
+            </button>
+            <button
+              class="px-4 bg-transparent rounded-full py-2 drop-shadow-lg border border-zinc-700 cursor-pointer"
+            >
+              See Pricing
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
