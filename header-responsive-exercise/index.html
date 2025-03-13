@@ -22,70 +22,97 @@
   <body>
     <!-- Reworked header (by watching the video) -->
 
-    <div
-      class="antialiased bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4]/50 to-[#C084FC] m-2 font-geist rounded-3xl"
-    >
+    <div class="antialiased m-2 font-geist">
       <!-- Section Container -->
 
-      <div class="container mx-auto pt-16 pb-48 px-8">
-        <!-- Header Container -->
+      <div
+        class="rounded-3xl bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4]/50 to-[#C084FC]"
+      >
+        <div class="container mx-auto pt-16 pb-48 px-8">
+          <!-- Header Container -->
 
-        <div class="flex justify-between items-center">
-          <div class="flex gap-[14px] items-center">
-            <img src="./arrow.png" alt="" class="w-4 h-4" />
-            <h1 class="font-semibold text-xl">Momentum</h1>
+          <div class="flex justify-between items-center">
+            <div class="flex gap-[14px] items-center">
+              <img src="./images/arrow.png" alt="" class="w-4 h-4" />
+              <h1 class="font-semibold text-xl">Momentum</h1>
+            </div>
+
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 md:hidden"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 9h16.5m-16.5 6.75h16.5"
+                />
+              </svg>
+            </div>
+            <nav class="hidden md:flex gap-1 items-center font-medium">
+              <a href="#" class="px-4">Features</a>
+              <a href="#" class="px-4">Solutions</a>
+              <a href="#" class="px-4">Resources</a>
+              <a href="#" class="px-4">Get Started</a>
+            </nav>
           </div>
+
+          <!-- Hero Container -->
 
           <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6 md:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 9h16.5m-16.5 6.75h16.5"
-              />
-            </svg>
+            <h1 class="font-medium text-6xl pt-32 md:text-9xl">
+              Win More Deals. Faster.
+            </h1>
+            <p class="font-medium text-2xl pt-8 max-w-[576px] text-zinc-700">
+              Momentum helps you close more sales with deep insights and smarter
+              automation.
+            </p>
+
+            <div class="pt-12 font-semibold flex gap-6 items-center">
+              <!-- Changed Drop shadow to shadow-md -->
+              <button
+                class="px-4 bg-black text-white rounded-full py-2 shadow-md cursor-pointer"
+              >
+                Get started
+              </button>
+
+              <!-- Changed border and bg-transparent to bg-white/20 -->
+              <button
+                class="px-4 rounded-full py-2 shadow-md bg-white/20 cursor-pointer"
+              >
+                See Pricing
+              </button>
+            </div>
           </div>
-          <nav class="hidden md:flex gap-1 items-center font-medium">
-            <a href="#" class="px-4">Features</a>
-            <a href="#" class="px-4">Solutions</a>
-            <a href="#" class="px-4">Resources</a>
-            <a href="#" class="px-4">Get Started</a>
-          </nav>
         </div>
-
-        <!-- Hero Container -->
-
-        <div>
-          <h1 class="font-medium text-6xl pt-32 md:text-9xl">
-            Win More Deals. Faster.
-          </h1>
-          <p class="font-medium text-2xl pt-8 max-w-[576px] text-zinc-700">
-            Momentum helps you close more sales with deep insights and smarter
-            automation.
-          </p>
-
-          <div class="pt-12 font-semibold flex gap-6 items-center">
-            <!-- Changed Drop shadow to shadow-md -->
-            <button
-              class="px-4 bg-black text-white rounded-full py-2 shadow-md cursor-pointer"
-            >
-              Get started
-            </button>
-
-            <!-- Changed border and bg-transparent to bg-white/20 -->
-            <button
-              class="px-4 rounded-full py-2 shadow-md bg-white/20 cursor-pointer"
-            >
-              See Pricing
-            </button>
-          </div>
+      </div>
+      <!-- Logo Container -->
+      <div class="py-10">
+        <div class="px-8 container mx-auto flex flex-wrap justify-center gap-6 lg:justify-between">
+          <img
+            src="./images/alt-shift-logo.png"
+            alt="alt-shift-logo"
+            class="h-8 md:h-12"
+          />
+          <img
+            src="./images/bolt-shift-logo.png"
+            alt="bolt-shift-logo"
+            class="h-8 md:h-12"
+          />
+          <img
+            src="./images/code-craft-logo.png"
+            alt="code-craft-logo"
+            class="h-8 md:h-12"
+          />
+          <img
+            src="./images/contrast-ai-logo.png"
+            alt="contrast-ai-logo"
+            class="h-8 md:h-12"
+          />
         </div>
       </div>
     </div>
