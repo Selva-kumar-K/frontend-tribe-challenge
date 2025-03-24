@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <style type="text/tailwindcss">
+        @theme{
+
+            --animate-drop-in : drop-in 1s ease-in-out;
+            --animate-drop-out : drop-out 1s ease-in-out;
+
+
+            @keyframes drop-in{
+                0%{
+                    transform: translateY(-100%);
+                    opacity:0;
+                }
+                100%{
+
+                    transform: translateY(0%);
+                    opacity:1;
+                }
+            }
+
+        @keyframes drop-out{
+            0%{
+                opacity:1;
+                transform: translateY(0%);
+            }
+
+            100%{
+                opacity:0;
+                transform: translateY(-100%);
+            }
+        }
+
+
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="flex h-screen items-center justify-center">
+      <div class="group">
+        <div
+          class="size-20 bg-red-500 opacity-0 animate-drop-out group-hover:opacity-100 group-hover:animate-drop-in"
+        ></div>
+        <h1>Hover me!</h1>
+      </div>
+    </div>
+  </body>
+</html>

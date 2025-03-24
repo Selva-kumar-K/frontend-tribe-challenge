@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <style>
+    <style type="text/tailwindcss">
       @theme {
         --font-geist: ("Geist", sans-serif);
+
+        --animate-drop-in: drop-in 1s ease-out forwards;
+        --animate-move-out: move-out 1s ease-out forwards;
+        --animate-move-chat-up: move-chat-up 2s ease-out infinite;
+
+        @keyframes drop-in {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0%);
+            opacity: 1;
+          }
+        }
+
+        @keyframes move-out {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 100%;
+          }
+        }
+
+        @keyframes move-chat-up {
+          0% {
+            transform: translateY(0);
+          }
+          25% {
+            transform: translateY(-58px);
+          }
+          50% {
+            transform: translateY(-58px);
+          }
+          75% {
+            transform: translateY(-116px);
+          }
+          100% {
+            transform: translateY(-116px);
+          }
+        }
       }
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
@@ -507,20 +550,13 @@
               >
                 <!-- gradient div -->
                 <div
-                  class="flex flex-col gap-2.5 w-[312px] h-[204px] md:w-[277.33px] md:h-[180px]"
+                  class="flex flex-col gap-2.5 w-[312px] h-[204px] md:w-[277.33px] md:h-[180px] group overflow-hidden"
                 >
                   <div
-                    class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex items-center gap-3"
+                    class="flex flex-col gap-2.5 group-hover:animate-move-chat-up"
                   >
                     <div
-                      class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
-                    ></div>
-                    <div class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"></div>
-                  </div>
-
-                  <div class="flex justify-end">
-                    <div
-                      class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex flex-row-reverse items-center gap-3"
+                      class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex items-center gap-3"
                     >
                       <div
                         class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
@@ -529,15 +565,52 @@
                         class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"
                       ></div>
                     </div>
-                  </div>
 
-                  <div
-                    class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex items-center gap-3"
-                  >
+                    <div class="flex justify-end">
+                      <div
+                        class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex flex-row-reverse items-center gap-3"
+                      >
+                        <div
+                          class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
+                        ></div>
+                        <div
+                          class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"
+                        ></div>
+                      </div>
+                    </div>
+
                     <div
-                      class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
-                    ></div>
-                    <div class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"></div>
+                      class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex items-center gap-3"
+                    >
+                      <div
+                        class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
+                      ></div>
+                      <div
+                        class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"
+                      ></div>
+                    </div>
+                    <div class="flex justify-end">
+                      <div
+                        class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex flex-row-reverse items-center gap-3"
+                      >
+                        <div
+                          class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
+                        ></div>
+                        <div
+                          class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-[244px] h-12 rounded-full border border-[#9333EA] p-2 flex items-center gap-3"
+                    >
+                      <div
+                        class="w-8 h-8 rounded-full bg-gradient-to-br from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
+                      ></div>
+                      <div
+                        class="w-[172px] h-4 bg-[#D4D4D8] rounded-full"
+                      ></div>
+                    </div>
                   </div>
                 </div>
 
@@ -557,23 +630,31 @@
               >
                 <!-- gradient div -->
                 <div
-                  class="flex flex-col gap-3 w-[312px] h-[182px] pt-2 md:w-[277.33px]"
+                  class="flex flex-col gap-3 w-[312px] h-[182px] pt-2 md:w-[277.33px] group"
                 >
-                  <div
-                    class="w-[278px] h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
-                  ></div>
+                  <div class="w-[278px]">
+                    <div
+                      class="h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC] group-hover:animate-move-out"
+                    ></div>
+                  </div>
 
-                  <div
-                    class="w-[182px] h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
-                  ></div>
+                  <div class="w-[182px]">
+                    <div
+                      class="w-[182px] h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC] group-hover:w-0 group-hover:animate-move-out group-hover:[animation-delay:.25s]"
+                    ></div>
+                  </div>
 
-                  <div
-                    class="w-[250px] h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
-                  ></div>
+                  <div class="w-[250px]">
+                    <div
+                      class="w-[250px] h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC] group-hover:w-0 group-hover:animate-move-out group-hover:[animation-delay:.5s]"
+                    ></div>
+                  </div>
 
-                  <div
-                    class="w-[224px] h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC]"
-                  ></div>
+                  <div class="w-[224px]">
+                    <div
+                      class="h-6 rounded-full bg-gradient-to-r from-[#FDE68A] via-[#F9A8D4] to-[#C084FC] group-hover:w-0 group-hover:animate-move-out group-hover:[animation-delay:1s]"
+                    ></div>
+                  </div>
                 </div>
 
                 <!-- Text div -->
@@ -591,7 +672,7 @@
                 class="p-8 rounded-xl border border-[#A1A1AA] w-[376px] h-[364px] md:w-[341.33px]"
               >
                 <!-- gradient div -->
-                <div class="w-[312px] h-[182px] md:w-[277.33px] relative">
+                <div class="w-[312px] h-[182px] md:w-[277.33px] relative group">
                   <div class="w-44 h-44 mx-auto">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -615,6 +696,7 @@
                       <circle cx="12" cy="12" r="10" />
                     </svg>
                   </div>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -625,7 +707,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-map-pin absolute top-[31px] left-[109px] stroke-[#9333EA] lg:left-[90px] lg:top-[34px] animate-bounce"
+                    class="lucide lucide-map-pin absolute top-[31px] left-[109px] stroke-[#9333EA] lg:left-[90px] lg:top-[34px] group-hover:opacity-0 group-hover:animate-drop-in"
                   >
                     <path
                       d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
@@ -642,7 +724,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-map-pin absolute top-[70px] left-[169px] stroke-[#9333EA] lg:top-[60px] lg:left-[150px] animate-bounce"
+                    class="lucide lucide-map-pin absolute top-[70px] left-[169px] stroke-[#9333EA] lg:top-[60px] lg:left-[150px] group-hover:animate-drop-in group-hover:[animation-delay:.5s] group-hover:opacity-0"
                   >
                     <path
                       d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
@@ -659,7 +741,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-map-pin absolute top-[100px] left-[120px] stroke-[#9333EA] lg:left-[110px] animate-bounce"
+                    class="lucide lucide-map-pin absolute top-[100px] left-[120px] stroke-[#9333EA] lg:left-[110px] group-hover:[animation-delay:.9s] group-hover:opacity-0 group-hover:animate-drop-in"
                   >
                     <path
                       d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
