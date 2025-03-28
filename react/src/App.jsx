@@ -1,14 +1,11 @@
 import React from "react";
-
-function Button(props) {
-  return <button className="button">{props.children}</button>;
-}
+import Button from "./components/Button";
+import Temperature from "./components/Temperature";
 
 export default function App() {
   return (
     <div className="app">
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
+      <Temperature />
     </div>
   );
 }
