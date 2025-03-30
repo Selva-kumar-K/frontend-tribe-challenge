@@ -1,10 +1,8 @@
 import React from "react";
-import TodoListNavigation from "./components/TodoListNavigation";
+import HomeControls from "./components/HomeControls";
 
 export default function App() {
-  return (
-    <div className="app">
-      <TodoListNavigation />
-    </div>
-  );
+  return <div className="app">
+    <HomeControls/>
+  </div>;
 }
