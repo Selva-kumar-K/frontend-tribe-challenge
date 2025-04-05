@@ -3,6 +3,7 @@ import HomeControls from "./components/HomeControls";
 import DogImage from "./components/DogImage";
 import DashboardNavigation from "./components/DashboardNavigation";
 import MediaTabs from "./components/MediaTabs";
+import EnergyConsumption from "./components/EnergyConsumption";
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
       {/* <HomeControls/> */}
       {/* <DogImage /> */}
       {/* <DashboardNavigation /> */}
-      <MediaTabs />
+      {/* <MediaTabs /> */}
+      <EnergyConsumption />
     </div>
   );
 }
