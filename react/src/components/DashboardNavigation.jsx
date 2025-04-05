@@ -38,6 +38,7 @@ export default function DashboardNavigation() {
         <div className="flex flex-col gap-2">
           {menus.map((menus) => (
             <div
+              key={menus.title}
               className={`p-4 flex gap-4 items-center rounded-xl cursor-pointer ${
                 selctedTab === menus.title ? "bg-[#E2E8EF]" : ""
               }`}
