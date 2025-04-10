@@ -71,7 +71,13 @@ export default function EnergyConsumption() {
                         <TrendingUp className="stroke-red-500" />
                       )}
 
-                      <span className="text-[#15803D] font-bold">
+                      <span
+                        className={`${
+                          consumption.percentage < 0
+                            ? "text-[#15803D]"
+                            : "text-red-500"
+                        } font-bold`}
+                      >
                         {consumption.percentage}%
                       </span>
                     </div>
