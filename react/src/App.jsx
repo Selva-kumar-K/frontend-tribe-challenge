@@ -4,6 +4,7 @@ import DogImage from "./components/DogImage";
 import DashboardNavigation from "./components/DashboardNavigation";
 import MediaTabs from "./components/MediaTabs";
 import EnergyConsumption from "./components/EnergyConsumption";
+import TaskList from "./components/TaskList";
 
 export default function App() {
   return (
@@ -12,7 +13,8 @@ export default function App() {
       {/* <DogImage /> */}
       {/* <DashboardNavigation /> */}
       {/* <MediaTabs /> */}
-      <EnergyConsumption />
+      {/* <EnergyConsumption /> */}
+      <TaskList />
     </div>
   );
 }
