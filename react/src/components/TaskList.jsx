@@ -1,8 +1,16 @@
 import { Search, Sun, Moon } from "lucide-react";
 
-import TaskCard from "./TaskCard";
+import TaskCard, { todosData } from "./TaskCard";
 
 export default function TaskList() {
+  const importantTodos = todosData.filter(
+    (todo) => todo.important && !todo.completed
+  );
+  const notImportantTodos = todosData.filter(
+    (todo) => !todo.important && !todo.completed
+  );
+  const completedTodos = todosData.filter((todo) => todo.completed);
+
   return (
     <div className="px-4 py-10 font-poppins max-w-[672px] mx-auto">
       {/* Search Bar */}
@@ -41,18 +49,13 @@ export default function TaskList() {
       </div>
 
       {/* Important Tasks */}
-      <TaskCard important={true} title="Important" completed={false} />
+      <TaskCard todosData={importantTodos} title="Important" />
 
       {/* Not Important */}
-      <TaskCard important={false} title="Everything Else" completed={false} />
+      <TaskCard todosData={notImportantTodos} title="Everything Else" />
 
       {/* Completed */}
-
-      <TaskCard title="Completed" completed={true} />
-
-      {/* <div className="mt-10">
-        <h1 className="text-lg text-zinc-900">Everything Else</h1>
-      </div> */}
+      <TaskCard todosData={completedTodos} title="Completed" />
     </div>
   );
 }

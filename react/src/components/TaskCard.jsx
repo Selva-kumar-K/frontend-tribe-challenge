@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { Star, Trash2 } from "lucide-react";
+import { useState } from "react";
 
 export const todosData = [
   {
@@ -184,105 +185,63 @@ export const todosData = [
   },
 ];
 
-export default function TaskCard({ important, completed, title }) {
+export default function TaskCard({ todosData, title }) {
+  const [todos, setTodos] = useState(todosData);
   return (
     <div className="mt-10">
       <h1 className="text-lg text-zinc-900">{title}</h1>
       <div className="mt-4">
         {/* Task */}
-
-        {todosData.map((todo) => {
-          if (important === true) {
-            if (todo.important) {
-              return (
-                <div key={todo.id} className="py-4 border-b border-zinc-300">
-                  <div className="flex justify-between items-center">
-                    <label className="flex gap-3">
-                      <input type="checkbox" />
-                      <span className="text-sm">{todo.text}</span>
-                    </label>
-                    <div className="flex gap-3">
-                      <Star
-                        size={20}
-                        className={twMerge(
-                          "stroke-zinc-400",
-                          todo.important && "stroke-pink-500 fill-pink-500"
-                        )}
-                      />
-                      <Trash2 size={20} className="stroke-zinc-400" />
-                    </div>
-                  </div>
-                </div>
-              );
-            }
-          } else if (important === false) {
-            if (!todo.important) {
-              return (
-                <div key={todo.id} className="py-4 border-b border-zinc-300">
-                  <div className="flex justify-between items-center">
-                    <label className="flex gap-3">
-                      <input type="checkbox" />
-                      <span className="text-sm">{todo.text}</span>
-                    </label>
-                    <div className="flex gap-3">
-                      <Star
-                        size={20}
-                        className={twMerge(
-                          "stroke-zinc-400",
-                          todo.important && "stroke-pink-500 fill-pink-500"
-                        )}
-                      />
-                      <Trash2 size={20} className="stroke-zinc-400" />
-                    </div>
-                  </div>
-                </div>
-              );
-            }
-          } else if (completed) {
-            if (todo.completed) {
-              return (
-                <div
-                  key={todo.id}
-                  className="py-4 border-b border-zinc-300 opacity-70"
+        {todos.map((todo) => {
+          return (
+            <div key={todo.id} className="py-4 border-b border-zinc-300">
+              <div className="flex justify-between items-center">
+                <label
+                  className="flex gap-3"
+                  onClick={() =>
+                    setTodos((prev) => {
+                      return prev.map((t) =>
+                        t.id === todo.id ? { ...t, completed: !t.completed } : t
+                      );
+                    })
+                  }
                 >
-                  <div className="flex justify-between items-center">
-                    <label className="flex gap-3">
-                      <input type="checkbox" />
-                      <span
-                        className={twMerge(
-                          "text-sm text-zinc-900",
-                          todo.completed && "line-through text-zinc-500"
-                        )}
-                      >
-                        {todo.text}
-                      </span>
-                    </label>
-                    <div className="flex gap-3">
-                      <Star
-                        size={20}
-                        className={twMerge(
-                          "stroke-zinc-400",
-                          todo.important
-                            ? "stroke-pink-500 fill-pink-500"
-                            : todo.completed
-                            ? "stroke-zinc-300"
-                            : ""
-                        )}
-                      />
-                      <Trash2
-                        size={20}
-                        className={twMerge(
-                          "stroke-zinc-400",
-
-                          todo.completed ? "stroke-zinc-300" : ""
-                        )}
-                      />
-                    </div>
-                  </div>
+                  <input
+                    type="checkbox"
+                    checked={todo.completed}
+                    onChange={() =>
+                      setTodos((prev) =>
+                        prev.map((t) =>
+                          t.id === todo.id
+                            ? { ...t, completed: !t.completed }
+                            : t
+                        )
+                      )
+                    }
+                  />
+                  <span
+                    className={twMerge(
+                      "text-sm",
+                      todo.completed && "line-through"
+                    )}
+                  >
+                    {todo.text}
+                  </span>
+                </label>
+                <div className="flex gap-3">
+                  <Star
+                    size={20}
+                    className={twMerge(
+                      "stroke-zinc-400",
+                      todo.important && "stroke-pink-500 fill-pink-500",
+                      todo.completed && "opacity-70 "
+                    )}
+                  />
+                  <Trash2 size={20} className={"stroke-zinc-400"} />
                 </div>
-              );
-            }
-          }
+              </div>
+            </div>
+          );
         })}
       </div>
     </div>
