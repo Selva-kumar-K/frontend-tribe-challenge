@@ -189,35 +189,21 @@ export default function TaskCard({ todosData, title }) {
   const [todos, setTodos] = useState(todosData);
   return (
     <div className="mt-10">
-      <h1 className="text-lg text-zinc-900">{title}</h1>
+      <h1 className="text-lg text-zinc-900 dark:text-zinc-100">{title}</h1>
       <div className="mt-4">
         {/* Task */}
         {todos.map((todo) => {
           return (
-            <div key={todo.id} className="py-4 border-b border-zinc-300">
+            <div
+              key={todo.id}
+              className="py-4 border-b border-zinc-300 dark:border-zinc-700"
+            >
               <div className="flex justify-between items-center">
-                <label
-                  className="flex gap-3"
-                  onClick={() =>
-                    setTodos((prev) => {
-                      return prev.map((t) =>
-                        t.id === todo.id ? { ...t, completed: !t.completed } : t
-                      );
-                    })
-                  }
-                >
+                <label className="flex gap-3">
                   <input
                     type="checkbox"
                     checked={todo.completed}
-                    onChange={() =>
-                      setTodos((prev) =>
-                        prev.map((t) =>
-                          t.id === todo.id
-                            ? { ...t, completed: !t.completed }
-                            : t
-                        )
-                      )
-                    }
+                    className=""
                   />
                   <span
                     className={twMerge(
@@ -233,11 +219,10 @@ export default function TaskCard({ todosData, title }) {
                     size={20}
                     className={twMerge(
                       "stroke-zinc-400",
-                      todo.important && "stroke-pink-500 fill-pink-500",
-                      todo.completed && "opacity-70 "
+                      todo.important && "stroke-pink-500 fill-pink-500"
                     )}
                   />
-                  <Trash2 size={20} className={"stroke-zinc-400"} />
+                  <Trash2 size={20} className="stroke-zinc-400" />
                 </div>
               </div>
             </div>
