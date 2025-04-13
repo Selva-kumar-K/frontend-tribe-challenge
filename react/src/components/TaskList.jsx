@@ -261,7 +261,11 @@ export default function TaskList() {
         <h1
           className={`text-4xl font-bold mt-12 ${darkMode && "text-zinc-100"}`}
         >
-          You’ve got <span className="text-pink-500">5 important tasks</span>{" "}
+          You’ve got{" "}
+          <span className="text-pink-500">
+            {importantTodos.length > 0 ? importantTodos.length : "no"}{" "}
+            important tasks
+          </span>{" "}
           left
         </h1>
         <div className="mt-4 flex gap-3">
